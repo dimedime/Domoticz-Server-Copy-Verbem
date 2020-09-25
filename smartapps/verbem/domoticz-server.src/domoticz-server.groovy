@@ -32,6 +32,7 @@
     V7.28	bug in refreshdevices when settings.roomplans = null
     V7.29	consumptionlow to consumptionLow
     V7.30	bug fix power
+    V7.50	HTTP Custom Action URL
  */
 
 import groovy.json.*
@@ -433,7 +434,7 @@ private def setupRefreshToken() {
     return dynamicPage(pageProperties) {
         section {
             paragraph "The Access Token has been refreshed"
-            //paragraph "${state.urlCustomActionHttp}"
+            paragraph "${state.urlCustomActionHttp}"
             paragraph "Tap Next to continue."
         }
     }
